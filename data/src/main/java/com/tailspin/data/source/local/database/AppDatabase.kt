@@ -1,4 +1,4 @@
-package com.tailspin.data.source.local
+package com.tailspin.data.source.local.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -17,8 +17,7 @@ import com.tailspin.data.source.local.entity.TagEntity
 abstract class AppDatabase : RoomDatabase() {
 
     abstract val itemDao : ItemDao
-    abstract val itemTagDao : ItemTagDao
-    abstract val tagDao : TagDao
+
     companion object {
         const val DB_NAME = "data.db"
     }

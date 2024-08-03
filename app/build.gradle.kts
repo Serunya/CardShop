@@ -52,9 +52,9 @@ android {
 }
 
 dependencies {
-    implementation(platform(":domain"))
-    implementation(platform(":data"))
-    implementation(platform(":presentation"))
+    implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation(project(":presentation"))
 
 
     implementation(libs.hilt.android)
