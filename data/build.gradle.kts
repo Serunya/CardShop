@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,23 +38,18 @@ android {
 dependencies {
     implementation (project(":domain"))
 
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
-
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-
+    // Room
+    implementation(libs.androidx.room.ktx)
     implementation (libs.androidx.room.runtime)
-    kapt (libs.androidx.room.compiler)
 
+    ksp (libs.androidx.room.compiler)
+
+    // Hilt
     implementation (libs.hilt.android)
     kapt (libs.hilt.android.compiler)
-    implementation (libs.androidx.hilt.lifecycle.viewmodel)
 
-    testImplementation (libs.junit)
+    // Test
     testImplementation (libs.mockk)
-
-
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

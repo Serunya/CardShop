@@ -1,12 +1,10 @@
 package com.tailspin.data.source.local.entity
 
-import androidx.room.Entity
-import androidx.room.ForeignKey
 
-
+/*
 @Entity(
     tableName = "item_tag",
-    primaryKeys = ["cardId", "tagId"],
+    primaryKeys = ["itemId", "tagId"],
     foreignKeys = [
         ForeignKey(
             entity = ItemEntity::class,
@@ -20,9 +18,13 @@ import androidx.room.ForeignKey
             childColumns = ["tagId"],
             onDelete = ForeignKey.CASCADE
         )
+    ],
+    indices = [
+        Index(value = ["itemId"]),
+        Index(value = ["tagId"])
     ]
 )
 class ItemTagEntity(
     var itemId: Int,
     var tagId: Int
-)
+)*/

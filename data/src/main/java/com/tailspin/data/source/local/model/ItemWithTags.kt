@@ -1,3 +1,4 @@
+/*
 package com.tailspin.data.source.local.model
 
 import androidx.room.Embedded
@@ -26,3 +27,4 @@ data class ItemWithTags(
         return Item(item.id, item.name, item.time, tags.map { Tag(it.name) }, item.amount)
     }
 }
+*/

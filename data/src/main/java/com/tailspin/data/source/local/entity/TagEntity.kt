@@ -1,3 +1,4 @@
+/*
 package com.tailspin.data.source.local.entity
 
 import androidx.room.ColumnInfo
@@ -11,4 +12,4 @@ data class TagEntity (
     var id : Int,
     @ColumnInfo(name = "name")
     var name : String
-)
+)*/
